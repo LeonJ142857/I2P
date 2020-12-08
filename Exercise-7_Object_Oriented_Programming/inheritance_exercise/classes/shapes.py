@@ -16,4 +16,6 @@ class Shapes:
 		self.__filled = filled
 
 	def to_string(self):
-		return f"A shape with color of {self.get_color()} and {self.is_filled()}"
+		filled = "filled"
+		unfilled = "Not filled"
+		return f"A shape with color of {self.get_color()} and {filled if self.is_filled() else unfilled}"
