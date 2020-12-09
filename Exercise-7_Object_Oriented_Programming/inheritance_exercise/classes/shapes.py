@@ -3,19 +3,23 @@ class Shapes:
 		self.__color = color
 		self.__filled = filled
 
-	def get_color(self):
+	@property
+	def color(self):
 		return self.__color
 
-	def set_color(self, color):
+	@color.setter
+	def color(self, color):
 		self.__color = color
 
-	def is_filled(self):
+	@property
+	def filled(self):
 		return self.__filled
 
-	def set_filled(self, filled):
+	@filled.setter
+	def filled(self, filled):
 		self.__filled = filled
 
-	def to_string(self):
+	def __str__(self):
 		filled = "filled"
 		unfilled = "Not filled"
-		return f"A shape with color of {self.get_color()} and {filled if self.is_filled() else unfilled}"
+		return f"A shape with color of {self.color} and {filled if self.filled else unfilled}"

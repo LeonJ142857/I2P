@@ -2,31 +2,39 @@ from shapes import Shapes
 
 
 class Rectangle(Shapes):
-	__width: float
-	__length: float
-
 	def __init__(self, width=1.0, length=1.0, color="green", filled=True):
 		super().__init__(color, filled)
 		self.__width = width
 		self.__length = length
 
-	def get_width(self):
+	@property
+	def width(self):
 		return self.__width
+
+	@width.setter
+	def width(self, width):
+		self.__width = width
 
 	def set_width(self, width):
 		self.__width = width
 
-	def get_length(self):
+	@property
+	def length(self):
 		return self.__length
+
+	@length.setter
+	def length(self, length):
+		self.__length = length
 
 	def set_length(self, length):
 		self.__length = length
+	@property
+	def area(self):
+		return self.width * self.length
 
-	def get_area(self):
-		return self.get_width() * self.get_length()
+	@property
+	def perimeter(self):
+		return 2 * (self.width + self.length)
 
-	def get_perimeter(self):
-		return 2 * (self.get_width() + self.get_length())
-
-	def to_string(self):
-		return f"A Rectangle with width={self.get_width()} and length={self.get_length()}, which is a subclass of {super().to_string()}"
+	def __str__(self):
+		return f"A Rectangle with width={self.width} and length={self.length}, which is a subclass of {super().__str__()}"
