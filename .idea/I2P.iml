@@ -5,11 +5,15 @@
       <sourceFolder url="file://$MODULE_DIR$/Exercise-7_Object_Oriented_Programming" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Exercise-7_Object_Oriented_Programming/banking_menu_driven_program/classes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Exercise-7_Object_Oriented_Programming/inheritance_exercise(shapes)/classes" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Calculator_Matrix_Calculator_(Binus_Project)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Matrix_Calculator" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Exercise-7_Object_Oriented_Programming/inheritance_exercise(person)/classes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Exercise-7_Object_Oriented_Programming/inheritance_exercise(person)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Matrix_Calculator/Classes" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Matrix_Calculator/helper_functions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Matrix_Calculator/button_objects" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Exercise-7_Object_Oriented_Programming/inheritance_exercise(shapes)" isTestSource="false" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.8 (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">
