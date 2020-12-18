@@ -9,9 +9,15 @@
       <sourceFolder url="file://$MODULE_DIR$/Exercise-7_Object_Oriented_Programming/inheritance_exercise(person)/classes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Exercise-7_Object_Oriented_Programming/inheritance_exercise(person)" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Matrix_Calculator/Classes" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Matrix_Calculator/helper_functions" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Matrix_Calculator/button_objects" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Matrix_Calculator/Configurations and Functions/helper_functions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Matrix_Calculator/Objects" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Exercise-7_Object_Oriented_Programming/inheritance_exercise(shapes)" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Alien_Invasion_Pygame/Part1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Alien_Invasion_Pygame/images" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Alien_Invasion_Pygame" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Matrix_Calculator/Objects/buttons" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Matrix_Calculator/Configurations and Functions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Matrix_Calculator/Configurations and Functions/configurations" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.8 (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
