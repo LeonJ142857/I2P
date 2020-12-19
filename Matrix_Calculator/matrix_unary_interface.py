@@ -1,5 +1,6 @@
 from tkinter import *
 from Classes.HoverButton import *
+from grid_configure_weight import grid_configures
 
 m = 3
 n = 3
@@ -16,10 +17,7 @@ row_count_root = max(4, n + 1)
 col_count_root = m + 3
 
 # Top level grid settings
-for i in range(row_count_root):
-	Grid.rowconfigure(matrix_unary_window, i, weight=1)
-for i in range(col_count_root):
-	Grid.columnconfigure(matrix_unary_window, i, weight=1)
+grid_configures(matrix_unary_window, row_count_root, col_count_root)
 
 # frame for unary operations buttons
 frame_buttons_unary = Frame(matrix_unary_window, relief=FLAT, bd=3, bg="gray70")
@@ -27,10 +25,9 @@ frame_buttons_unary.config(highlightbackground="red")
 frame_buttons_unary.grid(row=0, column=0, rowspan=4, columnspan=3, sticky="NSEW")
 
 # set weights for rows and columns in frame_buttons_unary
-for i in range(4):
-	Grid.rowconfigure(frame_buttons_unary, i, weight=1)
-for i in range(3):
-	Grid.columnconfigure(frame_buttons_unary, i, weight=1)
+row_count_frame_buttons_unary = 4
+col_count_frame_buttons_unary = 3
+grid_configures(frame_buttons_unary, row_count_frame_buttons_unary, col_count_frame_buttons_unary)
 
 # output space
 output_space = Entry(frame_buttons_unary, width=20, borderwidth=3)
@@ -50,10 +47,9 @@ button_transpose.grid  (row=3, column=1, sticky="NSEW")
 # frame for matrix 1, upper section
 frame1up = Frame(matrix_unary_window, relief=GROOVE, bd=3, bg="saddle brown")
 frame1up.grid(row=0, column=3, columnspan=n, sticky="NSEW")
-
-Grid.rowconfigure(frame1up, 0, weight=1)
-Grid.rowconfigure(frame1up, 1, weight=1)
-Grid.columnconfigure(frame1up, 0, weight=1)
+row_count_frame1up = 2
+col_count_frame1up = 1
+grid_configures(frame1up, row_count_frame_buttons_unary, col_count_frame1up)
 
 # a static text "matrix_size:(default='3x3')"
 text_matrix = Label(frame1up, anchor=CENTER, bd=3, text="matrix_size:(default='3x3')")
@@ -69,15 +65,10 @@ button_create_matrix = HoverButton(matrix_unary_window, text="create m x n matri
 								   fg="midnight blue", activebackground="gray87")
 button_create_matrix.grid(row=1, column=2, sticky="NSEW")
 
-
 # frame for matrix 1, lower section
 frame1lower = Frame(matrix_unary_window, relief=GROOVE, bd=3, bg="saddle brown")
 frame1lower.grid(row=1, column=3, rowspan=m, columnspan=n, sticky="NSEW")
-
-for i in range(m):
-	Grid.rowconfigure(frame1lower, i, weight=1)
-for i in range(n):
-	Grid.columnconfigure(frame1lower, i, weight=1)
+grid_configures(frame1lower, m, n)
 
 # entry list for all the entry box of which each is for a number
 entry_list1 = []
