@@ -1,5 +1,5 @@
 from root_window import io_space
-from helper_functions.un_ops import clear
+from helper_functions.un_ops_classic import clear
 
 class BinOps():
     def _init_(self):
