@@ -3,6 +3,7 @@ from un_ops_classic import *
 from bin_ops_classic import bin_ops
 from HoverButton import HoverButton
 
+# input number
 b1 = HoverButton(root_window, text="1", padx=25, pady=15, command=lambda: ins_val(1), bg="white", activebackground='gray87')
 b2 = HoverButton(root_window, text="2", padx=25, pady=15, command=lambda: ins_val(2), bg="white", activebackground='gray87')
 b3 = HoverButton(root_window, text="3", padx=25, pady=15, command=lambda: ins_val(3), bg="white", activebackground='gray87')
@@ -16,22 +17,21 @@ b0 = HoverButton(root_window, text="0", padx=25, pady=15, command=lambda: ins_va
 e = HoverButton(root_window, text="e", padx=26, pady=15, command=lambda: clear_insert(Euler), bg="white", activebackground='gray87')
 pi = HoverButton(root_window, text="pi", padx=23, pady=15, command=lambda: clear_insert(PI), bg="white", activebackground='gray87')
 
-
-
-###
+# other functionality
 unary = HoverButton(root_window, text="M UnOps", padx=0, pady=15, bg='tan1', activebackground='tan2')
 binary = HoverButton(root_window, text="M BinOps", padx=0, pady=15, bg='tan1', activebackground='tan2')
 CE = HoverButton(root_window, text="CE", padx=21, pady=15, command=clear, bg="ivory3", activebackground='cornsilk4')
 backspace = HoverButton(root_window, text="X", padx=25, pady=15, command=backspace, bg="ivory3", activebackground='cornsilk4')
 
+# basic operations
 add = HoverButton(root_window, text="+", padx=25, pady=15, command=bin_ops.add, bg='light goldenrod yellow', activebackground='yellow3')
 subtract = HoverButton(root_window, text="-", padx=27, pady=15, command=bin_ops.subtract, bg='light goldenrod yellow', activebackground='yellow3')
 multiply = HoverButton(root_window, text="*", padx=27, pady=15, command=bin_ops.multiply, bg='light goldenrod yellow', activebackground='yellow3')
 divide = HoverButton(root_window, text="/", padx=27, pady=15, command=bin_ops.divide, bg='light goldenrod yellow', activebackground='yellow3')
 modulo = HoverButton(root_window, text="mod", padx=17, pady=15, command=bin_ops.modulo, bg='light goldenrod yellow', activebackground='yellow3')
 equal = HoverButton(root_window, text="=", padx=25, pady=15, command=bin_ops.equal, bg="light blue", activebackground='dodger blue')
-###
 
+# advanced operations
 abs = HoverButton(root_window, text="abs", padx=19, pady=15, command=absolute, activebackground='pale goldenrod')
 a_pow_2 = HoverButton(root_window, text="a^2", padx=21, pady=15, command=square, activebackground='pale goldenrod')
 a_pow_b = HoverButton(root_window, text="a^b", padx=20, pady=15, command=bin_ops.a_pow_b, activebackground='pale goldenrod')

@@ -1,7 +1,7 @@
 def classic_buttons_positioning(b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, pi, e, unary, binary, CE, backspace,
 								add, subtract, multiply, divide, modulo, equal, abs, a_pow_2,  a_pow_b,
 								comma, exp, fact, log, ln, one_over_a, plus_min, sq_root, ten_pow_a):
-	# input number
+	# input number positioning
 	b1.grid(row=6, column=1, sticky="NSEW")
 	b2.grid(row=6, column=2, sticky="NSEW")
 	b3.grid(row=6, column=3, sticky="NSEW")
@@ -15,13 +15,13 @@ def classic_buttons_positioning(b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, pi, e, u
 	pi.grid(row=7, column=1, sticky="NSEW")
 	e.grid(row=7, column=3, sticky="NSEW")
 
-	# other functionalities
+	# other functionality positioning
 	unary.grid(row=1, column=1, sticky="NSEW")
 	binary.grid(row=1, column=0, sticky="NSEW")
 	CE.grid(row=1, column=3, sticky="NSEW")
 	backspace.grid(row=1, column=4, sticky="NSEW")
 
-	# basic operations
+	# basic operations positioning
 	add.grid(row=6, column=4, sticky="NSEW")
 	subtract.grid(row=5, column=4, sticky="NSEW")
 	multiply.grid(row=4, column=4, sticky="NSEW")
@@ -29,7 +29,7 @@ def classic_buttons_positioning(b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, pi, e, u
 	modulo.grid(row=2, column=4, sticky="NSEW")
 	equal.grid(row=7, column=4, sticky="NSEW")
 
-	# advanced operations
+	# advanced operations positioning
 	abs.grid(row=2, column=2, sticky="NSEW")
 	a_pow_2.grid(row=2, column=0, sticky="NSEW")
 	a_pow_b.grid(row=4, column=0, sticky="NSEW")
