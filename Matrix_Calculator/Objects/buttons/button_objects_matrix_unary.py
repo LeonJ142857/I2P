@@ -1,4 +1,5 @@
 from Classes.HoverButton import *
+from frames import frame_buttons_unary
 # unary operations buttons
 button_determinant = HoverButton(frame_buttons_unary, text="DET", padx=15, pady=15, bg="white",
 								 fg="midnight blue", activebackground="gray87")
