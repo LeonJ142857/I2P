@@ -41,5 +41,6 @@ button_pi = HoverButton(root, text="pi", padx=23, pady=15, command=lambda: clear
 button_apow2 = HoverButton(root, text="a^2", padx=21, pady=15, command=square, activebackground='pale goldenrod')
 button_1_a = HoverButton(root, text="1/a", padx=20, pady=15, command=one_over_a, activebackground='pale goldenrod')
 
-button_matrix = HoverButton(root, text="Matrix", padx=10, pady=15, command=lambda: forget_classic(button_list_classic), bg='tan1', activebackground='tan2')
+button_matrix_unary = HoverButton(root, text="M UnOps", padx=0, pady=15, bg='tan1', activebackground='tan2')
+button_matrix_binary = HoverButton(root, text="M BinOps", padx=0, pady=15, bg='tan1', activebackground='tan2')
 

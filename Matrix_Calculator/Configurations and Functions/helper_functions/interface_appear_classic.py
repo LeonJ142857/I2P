@@ -14,7 +14,9 @@ def appear_classic():
 	button_e.grid(row=7, column=3, sticky="NSEW")
 
 
-	button_matrix.grid(row=1, column=1, sticky="NSEW")
+	button_matrix_unary.grid(row=1, column=1, sticky="NSEW")
+	button_matrix_binary.grid(row=1, column=0, sticky="NSEW")
+
 	button_clear_entry.grid(row=1, column=3, sticky="NSEW")
 	button_backspace.grid(row=1, column=4, sticky="NSEW")
 	button_add.grid(row=6, column=4, sticky="NSEW")

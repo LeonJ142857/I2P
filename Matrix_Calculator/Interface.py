@@ -1,7 +1,7 @@
 from tkinter import *
 from interface_appear_classic import *
 
-root.minsize(300, 450)
+root.minsize(350, 450)
 Grid.rowconfigure(root, 0, weight=1)
 Grid.rowconfigure(root, 1, weight=1)
 Grid.rowconfigure(root, 2, weight=1)
