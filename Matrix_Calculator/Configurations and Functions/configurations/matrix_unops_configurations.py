@@ -33,26 +33,24 @@ def configure_unops(matrix_unary_window, m, n):
 	button_trace.grid      (row=2, column=2, sticky="NSEW")
 	button_transpose.grid  (row=3, column=1, sticky="NSEW")
 
-
 	frame1up.grid(row=0, column=3, columnspan=n, sticky="NSEW")
 	row_count_frame1up = 2
-	col_count_frame1up = 1
-	grid_configures(frame1up, row_count_frame_buttons_unary, col_count_frame1up)
+	col_count_frame1up = 5
+	grid_configures(frame1up, row_count_frame1up, col_count_frame1up)
 
 	# a static text "matrix_size:(default='3x3')"
 	text_matrix = Label(frame1up, anchor=CENTER, bd=3, text="matrix_size:(default='3x3')")
-	text_matrix.grid(row=0, column=0, columnspan=2, sticky="NSEW")
+	text_matrix.grid(row=0, column=0, columnspan=3, sticky="NSEW")
 
 	# input box for matrix size
 	size_entry = Entry(frame1up, width=7, borderwidth=3, justify=CENTER)
 	size_entry.insert(INSERT, "3 x 3")
-	size_entry.grid(row=0, column=2, sticky="NSEW")
+	size_entry.grid(row=0, column=3, columnspan=2, sticky="NSEW")
 
 	# button for creating matrix with size m x n
-	button_create_matrix = HoverButton(matrix_unary_window, text="create m x n matrix", padx=25, pady=15, bg="white",
+	button_create_matrix = HoverButton(frame1up, text="create m x n matrix", padx=0, pady=5, bg="white",
 									   fg="midnight blue", activebackground="gray87")
 	button_create_matrix.grid(row=1, column=2, sticky="NSEW")
-
 	frame1lower.grid(row=1, column=3, rowspan=m, columnspan=n, sticky="NSEW")
 	grid_configures(frame1lower, m, n)
 
