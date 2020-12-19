@@ -1,7 +1,7 @@
 from frames import *
 from grid_configure_weight import *
-from tkinter import * #
-from button_objects_matrix_unary import *
+from tkinter import *
+from objects_matrix_unary import *
 
 def configure_unops(matrix_unary_window, m, n):
 	row_count_root = max(4, n + 1)
@@ -24,14 +24,15 @@ def configure_unops(matrix_unary_window, m, n):
 
 
 	# unary operations buttons grid settings
-	button_determinant.grid(row=1, column=0, sticky="NSEW")
-	button_eigen_value.grid (row=1, column=1, sticky="NSEW")
-	button_inverse.grid    (row=1, column=2, sticky="NSEW")
-	button_nullspace.grid  (row=2, column=0, sticky="NSEW")
-	button_rank.grid	   (row=2, column=1, sticky="NSEW")
-	button_trace.grid      (row=2, column=2, sticky="NSEW")
-	button_transpose.grid  (row=3, column=1, sticky="NSEW")
+	determinant.grid(row=1, column=0, sticky="NSEW")
+	eigen_value.grid (row=1, column=1, sticky="NSEW")
+	inverse.grid    (row=1, column=2, sticky="NSEW")
+	nullspace.grid  (row=2, column=0, sticky="NSEW")
+	rank.grid	   (row=2, column=1, sticky="NSEW")
+	trace.grid      (row=2, column=2, sticky="NSEW")
+	transpose.grid  (row=3, column=1, sticky="NSEW")
 
+	# frame for matrix 1 upper position
 	frame1up.grid(row=0, column=3, columnspan=n, sticky="NSEW")
 	row_count_frame1up = 2
 	col_count_frame1up = 2

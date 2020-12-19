@@ -2,7 +2,8 @@ from root_window import root_window
 from un_ops_classic import *
 from bin_ops_classic import bin_ops
 from HoverButton import HoverButton
-
+from matrix_unops_configurations import configure_unops
+from matrix_unary_window import matrix_unary_window
 # input number
 b1 = HoverButton(root_window, text="1", padx=25, pady=15, command=lambda: ins_val(1), bg="white", activebackground='gray87')
 b2 = HoverButton(root_window, text="2", padx=25, pady=15, command=lambda: ins_val(2), bg="white", activebackground='gray87')
@@ -18,7 +19,7 @@ e = HoverButton(root_window, text="e", padx=26, pady=15, command=lambda: clear_i
 pi = HoverButton(root_window, text="pi", padx=23, pady=15, command=lambda: clear_insert(PI), bg="white", activebackground='gray87')
 
 # other functionality
-unary = HoverButton(root_window, text="M UnOps", padx=0, pady=15, bg='tan1', activebackground='tan2')
+unary = HoverButton(root_window, text="M UnOps", padx=0, pady=15, command=lambda:matrix_unary_window.configure(root_window, configure_unops), bg='tan1', activebackground='tan2')
 binary = HoverButton(root_window, text="M BinOps", padx=0, pady=15, bg='tan1', activebackground='tan2')
 CE = HoverButton(root_window, text="CE", padx=21, pady=15, command=clear, bg="ivory3", activebackground='cornsilk4')
 backspace = HoverButton(root_window, text="X", padx=25, pady=15, command=backspace, bg="ivory3", activebackground='cornsilk4')
