@@ -1,8 +1,7 @@
 from base import root
 from helper_functions.un_ops import *
-from Classes.bin_ops import bin_ops
-from Objects.button_objects_matrix import button_list_matrix
-from Classes.HoverButton import HoverButton
+from bin_ops import bin_ops
+from HoverButton import HoverButton
 
 button_1 = HoverButton(root, text="1", padx=25, pady=15, command=lambda: ins_val(1), bg="white", activebackground='gray87')
 button_2 = HoverButton(root, text="2", padx=25, pady=15, command=lambda: ins_val(2), bg="white", activebackground='gray87')
@@ -44,8 +43,3 @@ button_1_a = HoverButton(root, text="1/a", padx=20, pady=15, command=one_over_a,
 
 button_matrix = HoverButton(root, text="Matrix", padx=10, pady=15, command=lambda: forget_classic(button_list_classic), bg='tan1', activebackground='tan2')
 
-button_list_classic = [button_0, button_1, button_2, button_3, button_4, button_5, button_6, button_7, button_8,
-		button_9, button_pi, button_e, button_matrix, button_clear_entry, button_backspace, button_add,
-		button_subtract, button_multiply, button_divide, button_modulo, button_equal, button_apow2,
-		button_abs, button_exp, button_factorial, button_root, button_apowb, button_10powa, button_log,
-		button_ln, button_1_a, button_plus_min, button_comma]

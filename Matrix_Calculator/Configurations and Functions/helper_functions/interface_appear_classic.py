@@ -1,4 +1,4 @@
-from Objects.button_objects_classic import *
+from button_objects_classic import *
 def appear_classic():
 	button_1.grid(row=6, column=1, sticky="NSEW")
 	button_2.grid(row=6, column=2, sticky="NSEW")

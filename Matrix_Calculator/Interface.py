@@ -1,8 +1,7 @@
-from button_objects.button_objects_classic import *
 from tkinter import *
-from helper_functions.interface_appear_classic import *
+from interface_appear_classic import *
 
-root.geometry("300x450")
+root.minsize(300, 450)
 Grid.rowconfigure(root, 0, weight=1)
 Grid.rowconfigure(root, 1, weight=1)
 Grid.rowconfigure(root, 2, weight=1)
