@@ -1,8 +1,7 @@
-from base import io_space, Euler, PI
+from root_window import io_space, Euler, PI
 from tkinter import END
 from numpy import math
-from helper_functions.classic_buttons_positioning import classic_buttons_positioning
-from helper_functions.interface_appear_matrix import appear_matrix
+
 def clear():
     io_space.delete(0, END)
 
@@ -59,11 +58,3 @@ def log_e():
     curr = eval(io_space.get())
     clear_insert(str(math.log(curr)))
 
-def forget_classic(buttons):
-    for button in buttons:
-        button.forget()
-    classic_buttons_positioning()
-def forget_matrix(buttons):
-    for button in buttons:
-        button.forget()
-    appear_matrix()

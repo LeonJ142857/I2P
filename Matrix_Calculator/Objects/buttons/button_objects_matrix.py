@@ -1,5 +1,5 @@
 from Classes.HoverButton import HoverButton
-from base import root
+from root_window import root
 from helper_functions.create_matrix import create_matrix
 
 button_1x1 = HoverButton(HoverButton(root, text="1x1", padx=25, pady=15, command=lambda:create_matrix(1, 1), bg="white", activebackground='gray87'))
