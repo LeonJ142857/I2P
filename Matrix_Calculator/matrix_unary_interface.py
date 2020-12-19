@@ -1,7 +1,7 @@
 from tkinter import *
 from Classes.HoverButton import *
 from grid_configure_weight import grid_configures
-
+from frames import *
 m = 3
 n = 3
 x = 4
@@ -19,8 +19,6 @@ col_count_root = m + 3
 # Top level grid settings
 grid_configures(matrix_unary_window, row_count_root, col_count_root)
 
-# frame for unary operations buttons
-frame_buttons_unary = Frame(matrix_unary_window, relief=FLAT, bd=3, bg="gray70")
 frame_buttons_unary.config(highlightbackground="red")
 frame_buttons_unary.grid(row=0, column=0, rowspan=4, columnspan=3, sticky="NSEW")
 
@@ -44,8 +42,6 @@ button_trace.grid      (row=2, column=2, sticky="NSEW")
 button_transpose.grid  (row=3, column=1, sticky="NSEW")
 
 
-# frame for matrix 1, upper section
-frame1up = Frame(matrix_unary_window, relief=GROOVE, bd=3, bg="saddle brown")
 frame1up.grid(row=0, column=3, columnspan=n, sticky="NSEW")
 row_count_frame1up = 2
 col_count_frame1up = 1
@@ -65,8 +61,6 @@ button_create_matrix = HoverButton(matrix_unary_window, text="create m x n matri
 								   fg="midnight blue", activebackground="gray87")
 button_create_matrix.grid(row=1, column=2, sticky="NSEW")
 
-# frame for matrix 1, lower section
-frame1lower = Frame(matrix_unary_window, relief=GROOVE, bd=3, bg="saddle brown")
 frame1lower.grid(row=1, column=3, rowspan=m, columnspan=n, sticky="NSEW")
 grid_configures(frame1lower, m, n)
 
