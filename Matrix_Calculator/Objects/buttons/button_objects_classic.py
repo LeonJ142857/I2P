@@ -1,8 +1,9 @@
 from root_window import root_window
 from un_ops_classic import *
-from bin_ops_classic import bin_ops
+from BinOpsClassic import BinOpsClassic
 from HoverButton import HoverButton
 from matrix_unary_window import matrix_unary_window
+
 # input number
 b1 = HoverButton(root_window, text="1", padx=25, pady=15, command=lambda: ins_val(1), bg="white", activebackground='gray87')
 b2 = HoverButton(root_window, text="2", padx=25, pady=15, command=lambda: ins_val(2), bg="white", activebackground='gray87')
@@ -24,17 +25,17 @@ CE = HoverButton(root_window, text="CE", padx=21, pady=15, command=clear, bg="iv
 backspace = HoverButton(root_window, text="X", padx=25, pady=15, command=backspace, bg="ivory3", activebackground='cornsilk4')
 
 # basic operations
-add = HoverButton(root_window, text="+", padx=25, pady=15, command=bin_ops.add, bg='light goldenrod yellow', activebackground='yellow3')
-subtract = HoverButton(root_window, text="-", padx=27, pady=15, command=bin_ops.subtract, bg='light goldenrod yellow', activebackground='yellow3')
-multiply = HoverButton(root_window, text="*", padx=27, pady=15, command=bin_ops.multiply, bg='light goldenrod yellow', activebackground='yellow3')
-divide = HoverButton(root_window, text="/", padx=27, pady=15, command=bin_ops.divide, bg='light goldenrod yellow', activebackground='yellow3')
-modulo = HoverButton(root_window, text="mod", padx=17, pady=15, command=bin_ops.modulo, bg='light goldenrod yellow', activebackground='yellow3')
-equal = HoverButton(root_window, text="=", padx=25, pady=15, command=bin_ops.equal, bg="light blue", activebackground='dodger blue')
+add = HoverButton(root_window, text="+", padx=25, pady=15, command=BinOpsClassic.add, bg='light goldenrod yellow', activebackground='yellow3')
+subtract = HoverButton(root_window, text="-", padx=27, pady=15, command=BinOpsClassic.subtract, bg='light goldenrod yellow', activebackground='yellow3')
+multiply = HoverButton(root_window, text="*", padx=27, pady=15, command=BinOpsClassic.multiply, bg='light goldenrod yellow', activebackground='yellow3')
+divide = HoverButton(root_window, text="/", padx=27, pady=15, command=BinOpsClassic.divide, bg='light goldenrod yellow', activebackground='yellow3')
+modulo = HoverButton(root_window, text="mod", padx=17, pady=15, command=BinOpsClassic.modulo, bg='light goldenrod yellow', activebackground='yellow3')
+equal = HoverButton(root_window, text="=", padx=25, pady=15, command=BinOpsClassic.equal, bg="light blue", activebackground='dodger blue')
 
 # advanced operations
 abs = HoverButton(root_window, text="abs", padx=19, pady=15, command=absolute, activebackground='pale goldenrod')
 a_pow_2 = HoverButton(root_window, text="a^2", padx=21, pady=15, command=square, activebackground='pale goldenrod')
-a_pow_b = HoverButton(root_window, text="a^b", padx=20, pady=15, command=bin_ops.a_pow_b, activebackground='pale goldenrod')
+a_pow_b = HoverButton(root_window, text="a^b", padx=20, pady=15, command=BinOpsClassic.a_pow_b, activebackground='pale goldenrod')
 comma = HoverButton(root_window, text=".", padx=27, pady=15, command=lambda: ins_val('.'), activebackground='gray87')
 exp = HoverButton(root_window, text="exp", padx=19, pady=15, command=clear, activebackground='pale goldenrod') ################################
 fact = HoverButton(root_window, text="n!", padx=23, pady=15, command=factorial, activebackground='pale goldenrod')
@@ -44,5 +45,3 @@ one_over_a = HoverButton(root_window, text="1/a", padx=20, pady=15, command=one_
 plus_min = HoverButton(root_window, text="+/-", padx=19, pady=15, command=plus_min, activebackground='gray87')
 sq_root = HoverButton(root_window, text="sqrt", padx=20, pady=15, command=sqrt, activebackground='pale goldenrod')
 ten_pow_a = HoverButton(root_window, text="10^a", padx=17, pady=15, command=ten_pow_a, activebackground='pale goldenrod')
-
-

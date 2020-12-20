@@ -1,5 +1,6 @@
-from Classes.HoverButton import *
-from frames import *
+from HoverButton import HoverButton
+from matrix_unary_window import * # circular
+
 # unary operations buttons
 determinant = HoverButton(frame_buttons_unary, text="DET", padx=15, pady=15, bg="white",
 						  fg="midnight blue", activebackground="gray87")

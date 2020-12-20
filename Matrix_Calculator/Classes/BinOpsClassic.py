@@ -1,7 +1,7 @@
 from root_window import io_space
 from helper_functions.un_ops_classic import clear
 
-class BinOps():
+class BinOpsClassic():
     def _init_(self):
         self.__operation = ""
         self.f_num = 0
@@ -42,4 +42,4 @@ class BinOps():
         if self.operation == "exponentiation":
             io_space.insert(0, str(self.f_num ** s_num))
 
-bin_ops = BinOps()
+bin_ops = BinOpsClassic()

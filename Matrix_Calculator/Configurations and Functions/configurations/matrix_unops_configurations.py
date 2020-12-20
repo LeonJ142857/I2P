@@ -1,9 +1,9 @@
-from frames import *
 from grid_configure_weight import *
 from tkinter import *
-from objects_matrix_unary import *
+from objects_matrix_unary import * #circular
 
-def configure_unops(matrix_unary_window, m, n):
+
+def configure_unops(matrix_unary_window, m, n, **kwargs):
 	row_count_root = max(4, n + 1)
 	col_count_root = m + 3
 
@@ -11,7 +11,7 @@ def configure_unops(matrix_unary_window, m, n):
 	grid_configures(matrix_unary_window, row_count_root, col_count_root)
 
 	# frame_buttons_unary settings
-	frame_buttons_unary.grid(row=0, column=0, rowspan=4, columnspan=3, sticky="NSEW")
+	kwargs['frame_buttons_unary'].grid(row=0, column=0, rowspan=4, columnspan=3, sticky="NSEW")
 
 	# set weights for rows and columns in frame_buttons_unary
 	row_count_frame_buttons_unary = 4
@@ -21,7 +21,6 @@ def configure_unops(matrix_unary_window, m, n):
 	# output space
 	output_space = Entry(frame_buttons_unary, width=20, borderwidth=3)
 	output_space.grid(row=0, column=0, columnspan=3, sticky="NSEW")
-
 
 	# unary operations buttons grid settings
 	determinant.grid(row=1, column=0, sticky="NSEW")
