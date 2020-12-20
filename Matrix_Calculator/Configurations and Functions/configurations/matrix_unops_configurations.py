@@ -1,17 +1,29 @@
 from grid_configure_weight import *
 from tkinter import *
-from objects_matrix_unary import * #circular
+from HoverButton import HoverButton
 
 
-def configure_unops(matrix_unary_window, m, n, **kwargs):
+def configure_unops(matrix_unary_window, m, n, objects_matrix_unary):
 	row_count_root = max(4, n + 1)
 	col_count_root = m + 3
+
+	# renaming for easier access
+	frame_buttons_unary = objects_matrix_unary['frame_buttons_unary']
+	frame1up = objects_matrix_unary['frame1up']
+	frame1lower = objects_matrix_unary['frame1lower']
+	determinant = objects_matrix_unary['determinant']
+	eigen_value = objects_matrix_unary['eigen_value']
+	inverse = objects_matrix_unary['inverse']
+	null_space = objects_matrix_unary['null_space']
+	rank = objects_matrix_unary['rank']
+	trace = objects_matrix_unary['trace']
+	transpose = objects_matrix_unary['transpose']
 
 	# Top level grid settings
 	grid_configures(matrix_unary_window, row_count_root, col_count_root)
 
 	# frame_buttons_unary settings
-	kwargs['frame_buttons_unary'].grid(row=0, column=0, rowspan=4, columnspan=3, sticky="NSEW")
+	objects_matrix_unary['frame_buttons_unary'].grid(row=0, column=0, rowspan=4, columnspan=3, sticky="NSEW")
 
 	# set weights for rows and columns in frame_buttons_unary
 	row_count_frame_buttons_unary = 4
@@ -26,7 +38,7 @@ def configure_unops(matrix_unary_window, m, n, **kwargs):
 	determinant.grid(row=1, column=0, sticky="NSEW")
 	eigen_value.grid (row=1, column=1, sticky="NSEW")
 	inverse.grid    (row=1, column=2, sticky="NSEW")
-	nullspace.grid  (row=2, column=0, sticky="NSEW")
+	null_space.grid  (row=2, column=0, sticky="NSEW")
 	rank.grid	   (row=2, column=1, sticky="NSEW")
 	trace.grid      (row=2, column=2, sticky="NSEW")
 	transpose.grid  (row=3, column=1, sticky="NSEW")

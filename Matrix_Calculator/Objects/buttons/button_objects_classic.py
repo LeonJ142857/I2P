@@ -45,3 +45,11 @@ one_over_a = HoverButton(root_window, text="1/a", padx=20, pady=15, command=one_
 plus_min = HoverButton(root_window, text="+/-", padx=19, pady=15, command=plus_min, activebackground='gray87')
 sq_root = HoverButton(root_window, text="sqrt", padx=20, pady=15, command=sqrt, activebackground='pale goldenrod')
 ten_pow_a = HoverButton(root_window, text="10^a", padx=17, pady=15, command=ten_pow_a, activebackground='pale goldenrod')
+
+button_objects_classic = {
+	'b1': b1, 'b2': b2, 'b3': b3, 'b4': b4, 'b5': b5, 'b6': b6,'b7': b7, 'b8': b8, 'b9': b9, 'b0': b0,
+	'e': e, 'pi': pi, 'unary': unary, 'binary': binary, 'CE': CE, 'backspace': backspace,
+	'add': add, 'subtract': subtract, 'multiply' : multiply, 'divide': divide, 'modulo': modulo, 'equal': equal,
+	'abs': abs, 'a_pow_2': a_pow_2, 'a_pow_b': a_pow_b, 'comma': comma, 'exp': exp, 'fact': fact, 'log': log,
+	'ln': ln, 'one_over_a': one_over_a, 'plus_min': plus_min, 'sq_root': sq_root, 'ten_pow_a': ten_pow_a
+	}

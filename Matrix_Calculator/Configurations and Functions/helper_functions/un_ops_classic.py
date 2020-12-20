@@ -2,6 +2,7 @@ from root_window import io_space, Euler, PI
 from tkinter import END
 from numpy import math
 
+
 def clear():
     io_space.delete(0, END)
 

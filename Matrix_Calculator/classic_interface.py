@@ -1,10 +1,14 @@
 from classic_buttons_positioning import *
 from grid_configure_weight import *
 from button_objects_classic import *
+from matrix_unops_configurations import configure_unops
+from button_objects_classic import button_objects_classic
+from matrix_unary_window import matrix_unary_window
+from objects_matrix_unary import objects_matrix_unary
 
 root_window.minsize(350, 450)
 grid_configures(root_window, 8, 5)
-classic_buttons_positioning(b1, b2, b3, b4, b5, b6, b7, b8, b9, b0, pi, e, unary, binary, CE, backspace,
-								add, subtract, multiply, divide, modulo, equal, abs, a_pow_2,  a_pow_b,
-								comma, exp, fact, log, ln, one_over_a, plus_min, sq_root, ten_pow_a)
+classic_buttons_positioning(button_objects_classic)
+configure_unops(matrix_unary_window, matrix_unary_window.row_count,
+				matrix_unary_window.column_count, objects_matrix_unary)
 root_window.mainloop()
