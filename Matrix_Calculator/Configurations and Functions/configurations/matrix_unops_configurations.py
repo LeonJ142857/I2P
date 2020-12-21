@@ -4,9 +4,9 @@ from HoverButton import HoverButton
 
 
 def configure_unops(matrix_unary_window, m, n, objects_matrix_unary):
-	row_count_root = max(4, n + 1)
-	col_count_root = m + 3
-
+	matrix_unary_window.row_count = max(4, m + 1)
+	col_count_root = n + 3
+	matrix_unary_window.minsize(width, height)
 	# renaming for easier access
 	frame_buttons_unary = objects_matrix_unary['frame_buttons_unary']
 	frame1up = objects_matrix_unary['frame1up']
