@@ -8,3 +8,4 @@ root_window.title("Simple Calculator")
 
 io_space = Entry(root_window, width=40, borderwidth=3, font=("TimesNewRoman 12"))
 io_space.grid(row=0, column=0, columnspan=5, padx=10, ipady=5)
+

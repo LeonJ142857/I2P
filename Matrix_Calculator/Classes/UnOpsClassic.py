@@ -1,6 +1,6 @@
 from root_window import io_space, Euler, PI
 from tkinter import END
-from numpy import math
+import math
 
 
 class UnOpsClassic():
@@ -45,7 +45,7 @@ class UnOpsClassic():
 
     def square(self):
         curr = eval(self.io_space.get())
-        self.clear_insert(str(curr ** 2))
+        self.clear_insert(str(curr ** 2.0))
 
     def absolute(self):
         curr = eval(self.io_space.get())
@@ -53,13 +53,12 @@ class UnOpsClassic():
 
     def ten_pow_a(self):
         curr = eval(self.io_space.get())
-        self.clear_insert(str(10 ** curr))
+        self.clear_insert(str(10.0 ** curr))
 
     def factorial(self):
         curr = eval(self.io_space.get())
-        fact1 = str(math.factorial(curr))
-        fact2 = str(((2 * float(PI) * curr) ** 0.5) * (curr / float(Euler)) ** curr)
-        self.clear_insert(fact1 if type(curr) == int else fact2)
+        fact = str(math.gamma(curr + 1))
+        self.clear_insert(fact)
 
     def log10(self):
         curr = eval(self.io_space.get())

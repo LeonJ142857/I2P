@@ -22,7 +22,7 @@ class BinOpsClassic():
 
     @f_num.setter
     def f_num(self, f_num):
-        self.f_num = f_num
+        self.__f_num = f_num
 
     @property
     def io_space(self):
@@ -34,7 +34,7 @@ class BinOpsClassic():
 
     def add(self):
         self.set_fnum_operation(eval(self.io_space.get()), "addition")
-        un_ops_classic.un_ops_classic.clear()()
+        un_ops_classic.clear()
 
     def subtract(self):
         self.set_fnum_operation(eval(self.io_space.get()), "subtraction")
@@ -60,17 +60,17 @@ class BinOpsClassic():
         s_num = eval(self.io_space.get())
         un_ops_classic.clear()
         if self.operation == "addition":
-            self.io_space.insert(0, str(self.f_num + s_num))
+            self.io_space.insert(0, str((self.f_num + s_num)**1.0))
         elif self.operation == "subtraction":
-            self.io_space.insert(0, str(self.f_num - s_num))
+            self.io_space.insert(0, str((self.f_num - s_num)**1.0))
         elif self.operation == "multiplication":
-            self.io_space.insert(0, str(self.f_num * s_num))
+            self.io_space.insert(0, str((self.f_num * s_num)**1.0))
         elif self.operation == "division":
-            self.io_space.insert(0, str(self.f_num / s_num))
+            self.io_space.insert(0, str((self.f_num / s_num)**1.0))
         elif self.operation == "modulo":
-            self.io_space.insert(0, str(self.f_num % s_num))
+            self.io_space.insert(0, str((self.f_num % s_num)**1.0))
         elif self.operation == "exponentiation":
-            self.io_space.insert(0, str(self.f_num ** s_num))
+            self.io_space.insert(0, str((self.f_num ** s_num)**1.0))
 
 
 bin_ops_classic = BinOpsClassic(io_space)
