@@ -1,45 +1,76 @@
 from root_window import io_space
-from helper_functions.un_ops_classic import clear
+from UnOpsClassic import un_ops_classic
+
 
 class BinOpsClassic():
-    def _init_(self):
+    def __init__(self, io_space):
         self.__operation = ""
-        self.f_num = 0
+        self.__f_num = 0
+        self.__io_space = io_space
+
+    @property
+    def operation(self):
+        return self.__operation
+
+    @operation.setter
+    def operation(self, operation):
+        self.__operation = operation
+
+    @property
+    def f_num(self):
+        return self.__f_num
+
+    @f_num.setter
+    def f_num(self, f_num):
+        self.f_num = f_num
+
+    @property
+    def io_space(self):
+        return self.__io_space
+
     def set_fnum_operation(self, num, string):
         self.f_num = num
         self.operation = string
-    def add(self):
-        self.set_fnum_operation(eval(io_space.get()), "addition")
-        clear()
-    def subtract(self):
-        self.set_fnum_operation(eval(io_space.get()), "subtraction")
-        clear()
-    def multiply(self):
-        self.set_fnum_operation(eval(io_space.get()), "multiplication")
-        clear()
-    def divide(self):
-        self.set_fnum_operation(eval(io_space.get()), "division")
-        clear()
-    def modulo(self):
-        self.set_fnum_operation(eval(io_space.get()), "modulo")
-        clear()
-    def a_pow_b(self):
-        self.set_fnum_operation(eval(io_space.get()), "exponentiation")
-        clear()
-    def equal(self):
-        s_num = eval(io_space.get())
-        clear()
-        if self.operation == "addition":
-            io_space.insert(0, str(self.f_num + s_num))
-        if self.operation == "subtraction":
-            io_space.insert(0, str(self.f_num - s_num))
-        if self.operation == "multiplication":
-            io_space.insert(0, str(self.f_num * s_num))
-        if self.operation == "division":
-            io_space.insert(0, str(self.f_num / s_num))
-        if self.operation == "modulo":
-            io_space.insert(0, str(self.f_num % s_num))
-        if self.operation == "exponentiation":
-            io_space.insert(0, str(self.f_num ** s_num))
 
-bin_ops = BinOpsClassic()
+    def add(self):
+        self.set_fnum_operation(eval(self.io_space.get()), "addition")
+        un_ops_classic.un_ops_classic.clear()()
+
+    def subtract(self):
+        self.set_fnum_operation(eval(self.io_space.get()), "subtraction")
+        un_ops_classic.clear()
+
+    def multiply(self):
+        self.set_fnum_operation(eval(self.io_space.get()), "multiplication")
+        un_ops_classic.clear()
+
+    def divide(self):
+        self.set_fnum_operation(eval(self.io_space.get()), "division")
+        un_ops_classic.clear()
+
+    def modulo(self):
+        self.set_fnum_operation(eval(self.io_space.get()), "modulo")
+        un_ops_classic.clear()
+
+    def a_pow_b(self):
+        self.set_fnum_operation(eval(self.io_space.get()), "exponentiation")
+        un_ops_classic.clear()
+
+    def equal(self):
+        s_num = eval(self.io_space.get())
+        un_ops_classic.clear()
+        if self.operation == "addition":
+            self.io_space.insert(0, str(self.f_num + s_num))
+        elif self.operation == "subtraction":
+            self.io_space.insert(0, str(self.f_num - s_num))
+        elif self.operation == "multiplication":
+            self.io_space.insert(0, str(self.f_num * s_num))
+        elif self.operation == "division":
+            self.io_space.insert(0, str(self.f_num / s_num))
+        elif self.operation == "modulo":
+            self.io_space.insert(0, str(self.f_num % s_num))
+        elif self.operation == "exponentiation":
+            self.io_space.insert(0, str(self.f_num ** s_num))
+
+
+bin_ops_classic = BinOpsClassic(io_space)
