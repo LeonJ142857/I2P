@@ -36,7 +36,7 @@ equal = HoverButton(root_window, text="=", padx=25, pady=15, command=bin_ops_cla
 abs = HoverButton(root_window, text="abs", padx=19, pady=15, command=un_ops_classic.absolute, activebackground='pale goldenrod')
 a_pow_2 = HoverButton(root_window, text="a^2", padx=21, pady=15, command=un_ops_classic.square, activebackground='pale goldenrod')
 a_pow_b = HoverButton(root_window, text="a^b", padx=20, pady=15, command=bin_ops_classic.a_pow_b, activebackground='pale goldenrod')
-comma = HoverButton(root_window, text=".", padx=27, pady=15, command=lambda: un_ops_classic.ins_val('.'), activebackground='gray87')
+comma = HoverButton(root_window, text=".", padx=27, pady=15, command=un_ops_classic.comma, activebackground='gray87')
 exp = HoverButton(root_window, text="exp", padx=19, pady=15, command=un_ops_classic.clear, activebackground='pale goldenrod') ################################
 fact = HoverButton(root_window, text="n!", padx=23, pady=15, command=un_ops_classic.factorial, activebackground='pale goldenrod')
 log = HoverButton(root_window, text="log", padx=22, pady=15, command=un_ops_classic.log10, activebackground='pale goldenrod')
