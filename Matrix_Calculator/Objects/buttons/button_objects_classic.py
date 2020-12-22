@@ -2,7 +2,6 @@ from root_window import root_window, Euler, PI
 from UnOpsClassic import un_ops_classic
 from BinOpsClassic import bin_ops_classic
 from HoverButton import HoverButton
-from matrix_unary_window import matrix_unary_window
 
 # input number
 b1 = HoverButton(root_window, text="1", padx=25, pady=15, command=lambda: un_ops_classic.ins_val(1), bg="white", activebackground='gray87')

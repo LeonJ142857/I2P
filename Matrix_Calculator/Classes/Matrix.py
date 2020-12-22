@@ -2,29 +2,29 @@ from tkinter import Entry
 
 
 class Matrix:
-	def __init__(self, frame_lower, m, n):
+	def __init__(self, frame_lower, row_count=3, column_count=3):
 		self.__frame_lower = frame_lower
 		self.__entry_list = []
-		self.__m = m
-		self.__n = n
-		self.create_matrix(m, n)
+		self.__row_count = row_count
+		self.__column_count = column_count
+		self.create_matrix(row_count, column_count)
 
 	@property
 	def entry_list(self):
 		return self.__entry_list
 
-	def create_matrix(self, m, n):
+	def create_matrix(self, row_count, column_count):
 		if len(self.entry_list) > 0:
 			for row in self.entry_list:
 				for entry in row:
 					entry.destroy()
-		for i in range(m):
+		for i in range(row_count):
 			row = []
-			for j in range(n):
+			for j in range(column_count):
 				entry = Entry(self.__frame_lower, width=4, borderwidth=2, font="Helvetica 10", justify="center")
 				entry.grid(row=i, column=j, ipadx=15, ipady=15, sticky="NSEW")
 				row.append(entry)
 			self.entry_list.append(row)
-		self.__m = m
-		self.__n = n
+		self.__row_count = row_count
+		self.__column_count = column_count
 
