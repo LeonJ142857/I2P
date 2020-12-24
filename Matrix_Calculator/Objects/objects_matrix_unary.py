@@ -3,7 +3,7 @@ from tkinter import *
 from MatrixWindow import MatrixWindow
 from root_window import root_window
 from Matrix import Matrix
-from create_matrix import create_matrix
+from helper_functions import create_matrix
 
 matrix_unary_window = MatrixWindow(root_window, bg='gray87')
 # frame for unary operations buttons

@@ -10,6 +10,14 @@ class Matrix:
 		self.create_matrix(row_count, column_count)
 
 	@property
+	def row_count(self):
+		return self.__row_count
+
+	@property
+	def column_count(self):
+		return self.__column_count
+
+	@property
 	def entry_list(self):
 		return self.__entry_list
 
