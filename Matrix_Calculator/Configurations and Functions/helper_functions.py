@@ -1,11 +1,19 @@
-def create_matrix(matrix, size_entry):
+def create_matrix(matrix_unary_window, frame1up, frame1lower, matrix, size_entry):
 	m = size_entry.get()[0]
 	n = size_entry.get()[4]
 	cond1 = isinstance(eval(m), (int, float))
 	cond2 = isinstance(eval(n), (int, float))
-	cond3 = size_entry.get()[2]
+	cond3 = size_entry.get()[2] == 'x'
 	if cond1 and cond2 and cond3:
-		matrix.create_matrix(eval(m), eval(n))
+		m = eval(m)
+		n = eval(n)
+		matrix.create_matrix(m, n)
+		window_width = int(240 + 62.5 * n)
+		window_height = int(43 + max(100, 55 * m))
+		matrix_unary_window.geometry(f'{window_width}x{window_height}')
+		matrix_unary_window.resizable(width=False, height=False)
+		frame1up.grid(row=0, column=3, columnspan=n, sticky="NSEW")
+		frame1lower.grid(row=1, column=3, rowspan=m, columnspan=n, sticky="NSEW")
 
 
 def on_closing_root(root):

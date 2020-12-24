@@ -9,7 +9,7 @@ matrix_unary_window = MatrixWindow(root_window, bg='gray87')
 # frame for unary operations buttons
 frame_buttons_unary = Frame(matrix_unary_window, relief=FLAT, bd=3, bg="gray70")
 # frame for matrix 1, upper section
-frame1up = Frame(matrix_unary_window, relief=GROOVE, bd=3, bg="saddle brown")
+frame1up = Frame(matrix_unary_window, relief=GROOVE, bd=3, bg="gray70")
 # frame for matrix 1, lower section
 frame1lower = Frame(matrix_unary_window, relief=GROOVE, bd=3, bg="saddle brown")
 matrix_unary = Matrix(frame1lower)
@@ -39,14 +39,15 @@ size_entry = Entry(frame1up, width=7, borderwidth=3, justify=CENTER)
 # button for creating matrix with size m x n
 button_create_matrix = HoverButton(
 	frame1up, text="create m x n matrix", padx=0, pady=5, bg="white", fg="midnight blue",
-	command=lambda:create_matrix(matrix_unary, size_entry),	activebackground="gray87")
+	command=lambda:create_matrix(matrix_unary_window, frame1up, frame1lower, matrix_unary, size_entry), activebackground="gray87")
 
 # output space
 output_space = Entry(frame_buttons_unary, width=20, borderwidth=3)
 
 objects_matrix_unary = {
-	'matrix_unary_window': matrix_unary_window, 'matrix_unary': matrix_unary, 'text_matrix': text_matrix,
-	'size_entry': size_entry, 'button_create_matrix': button_create_matrix, 'frame_buttons_unary': frame_buttons_unary, 'frame1up': frame1up,
-	'frame1lower': frame1lower, 'determinant': determinant, 'eigen_value': eigen_value, 'output_space': output_space,
-	'inverse': inverse, 'null_space': null_space, 'rank': rank, 'trace': trace, 'transpose': transpose
+	'matrix_unary_window': matrix_unary_window, 'text_matrix': text_matrix, 'size_entry': size_entry,
+	'button_create_matrix': button_create_matrix, 'frame_buttons_unary': frame_buttons_unary,
+	'frame1up': frame1up, 'frame1lower': frame1lower, 'determinant': determinant, 'eigen_value': eigen_value,
+	'output_space': output_space, 'inverse': inverse, 'null_space': null_space, 'rank': rank, 'trace': trace,
+	'transpose': transpose
 }
