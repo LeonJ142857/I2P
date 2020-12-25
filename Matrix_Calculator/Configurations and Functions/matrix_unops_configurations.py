@@ -29,14 +29,11 @@ def configure_unops(objects_matrix_unary, matrix_unary):
 	matrix_unary_window.title("Classic Calculator > Matrix Unary Calculator")
 	matrix_unary_window.protocol("WM_DELETE_WINDOW", matrix_unary_window.withdraw)
 	unary_window_width = 240 + 60 * 3
-	unary_window_height = 43 + max(100, 60 * 3)
+	unary_window_height = 65 + max(100, 53 * 3)
 	unary_init_x = 50 + 390
 	unary_init_y = 50
 	matrix_unary_window.geometry(f'{unary_window_width}x{unary_window_height}+{unary_init_x}+{unary_init_y}')
 	matrix_unary_window.resizable(width=False, height=False)
-
-	# creating m x n entry boxes inside frame 1 lower section
-	matrix_unary.create_matrix(m, n)
 
 	# unary operations objects positioning
 	frame_buttons_unary.grid(row=0, column=0, rowspan=4, columnspan=3, sticky="NSEW")
@@ -55,3 +52,4 @@ def configure_unops(objects_matrix_unary, matrix_unary):
 	output_space.grid(row=0, column=0, columnspan=3, ipady=2, sticky="NSEW")
 
 	size_entry.insert(INSERT, "3 x 3")
+	output_space.insert(INSERT, "This is where you will see the output.")
