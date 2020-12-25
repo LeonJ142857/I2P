@@ -1,4 +1,4 @@
-from Classes.HoverButton import *
+from HoverButton import *
 # binary operations buttons
 button_add = HoverButton(matrix_binary_window, text="+", padx=25, pady=15, bg="white",
 						 fg="midnight blue", activebackground="gray87")

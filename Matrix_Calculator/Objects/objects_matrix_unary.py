@@ -27,7 +27,7 @@ button_create_matrix = HoverButton(
 	command=lambda:create_matrix(matrix_unary_window, frame1up, frame1lower, matrix_unary, size_entry), activebackground="gray87")
 
 # output space
-output_space = Text(frame_buttons_unary, height=3, bd=3, width=20, wrap=WORD)
+output_space = Text(frame_buttons_unary, height=3, bd=3, width=20, wrap=NONE)
 
 un_ops_matrix = UnOpsMatrix(output_space)
 
