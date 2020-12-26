@@ -11,24 +11,29 @@ matrix_unary_window = MatrixWindow(root_window, bg='gray87')
 # frame for unary operations buttons
 frame_buttons_unary = Frame(matrix_unary_window, relief=FLAT, bd=3, bg="gray70")
 # frame for matrix 1, upper section
-frame1up = Frame(matrix_unary_window, relief=GROOVE, bd=3, bg="gray70")
+frame_up = Frame(matrix_unary_window, relief=GROOVE, bd=3, bg="gray70")
 # frame for matrix 1, lower section
-frame1lower = Frame(matrix_unary_window, relief=GROOVE, bd=3, bg="saddle brown")
-matrix_unary = Matrix(frame1lower)
+frame_lower = Frame(matrix_unary_window, relief=GROOVE, bd=3, bg="saddle brown")
+matrix_unary = Matrix(frame_lower)
 # a static text "matrix_size:"
-text_matrix = Label(frame1up, anchor=CENTER, bd=3, text="matrix_size:")
-
+text_matrix = Label(frame_up, anchor=CENTER, bd=3, text="matrix_size:")
 # input box for matrix size
-size_entry = Entry(frame1up, width=7, borderwidth=3, justify=CENTER)
+size_entry = Entry(frame_up, width=7, borderwidth=3, justify=CENTER)
 
 # button for creating matrix with size m x n
-button_create_matrix = HoverButton(
-	frame1up, text="create m x n matrix", padx=0, pady=5, bg="white", fg="midnight blue",
-	command=lambda:create_matrix(matrix_unary_window, frame1up, frame1lower, matrix_unary, size_entry), activebackground="gray87")
+button_create_matrix = \
+	HoverButton(
+		frame_up, text="create m x n matrix", padx=0,
+		pady=5, bg="white", fg="midnight blue",
+		command=lambda: create_matrix(
+			matrix_unary_window, frame_up,
+			frame_lower, matrix_unary, size_entry
+		), activebackground="gray87"
+	)
 
 # output space
 output_space = Text(frame_buttons_unary, height=3, bd=3, width=20, wrap=NONE)
-
+# instance of custom-made matrix unary operations class
 un_ops_matrix = UnOpsMatrix(output_space)
 
 # unary operations buttons
@@ -74,11 +79,10 @@ transpose = \
 		command=lambda: un_ops_matrix.transpose(matrix_unary.entry_list),
 		bg="white", fg="midnight blue", activebackground="gray87"
 	)
-
 objects_matrix_unary = {
 	'matrix_unary_window': matrix_unary_window, 'text_matrix': text_matrix, 'size_entry': size_entry,
 	'button_create_matrix': button_create_matrix, 'frame_buttons_unary': frame_buttons_unary,
-	'frame1up': frame1up, 'frame1lower': frame1lower, 'determinant': determinant, 'eigen_value': eigen_value,
+	'frame1up': frame_up, 'frame1lower': frame_lower, 'determinant': determinant, 'eigen': eigen_value,
 	'output_space': output_space, 'inverse': inverse, 'null_space': null_space, 'rank': rank, 'trace': trace,
 	'transpose': transpose
 }

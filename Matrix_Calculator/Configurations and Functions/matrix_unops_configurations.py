@@ -5,7 +5,7 @@ def configure_unops(objects_matrix_unary, matrix_unary):
 	# renaming for easier access
 	button_create_matrix = objects_matrix_unary['button_create_matrix']
 	determinant = objects_matrix_unary['determinant']
-	eigen_value = objects_matrix_unary['eigen_value']
+	eigen = objects_matrix_unary['eigen']
 	frame_buttons_unary = objects_matrix_unary['frame_buttons_unary']
 	frame1up = objects_matrix_unary['frame1up']
 	frame1lower = objects_matrix_unary['frame1lower']
@@ -20,7 +20,7 @@ def configure_unops(objects_matrix_unary, matrix_unary):
 	trace = objects_matrix_unary['trace']
 	transpose = objects_matrix_unary['transpose']
 	text_matrix = objects_matrix_unary['text_matrix']
-	buttons = [button_create_matrix, determinant, eigen_value, inverse, null_space,
+	buttons = [button_create_matrix, determinant, eigen, inverse, null_space,
 			   output_space, rank, size_entry, trace, transpose, text_matrix]
 
 	for widget in buttons:
@@ -40,7 +40,7 @@ def configure_unops(objects_matrix_unary, matrix_unary):
 	frame1up.grid(row=0, column=3, columnspan=3, sticky="NSEW")
 	frame1lower.grid(row=1, column=3, rowspan=3, columnspan=3, sticky="NSEW")
 	determinant.grid(row=1, column=0, sticky="NSEW")
-	eigen_value.grid(row=1, column=1, sticky="NSEW")
+	eigen.grid(row=1, column=1, sticky="NSEW")
 	inverse.grid    (row=1, column=2, sticky="NSEW")
 	null_space.grid (row=2, column=0, sticky="NSEW")
 	rank.grid	    (row=2, column=1, sticky="NSEW")

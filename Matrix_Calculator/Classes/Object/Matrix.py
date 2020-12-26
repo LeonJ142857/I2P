@@ -43,9 +43,5 @@ class Matrix:
 				entry.grid_propagate(False)
 				row.append(entry)
 			self.entry_list.append(row)
-		from pprint import pprint
-		print(self.entry_list)
-		pprint(self.entry_list)
 		self.row_count = row_count
 		self.column_count = column_count
-		print(self.row_count, self.column_count)

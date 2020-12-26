@@ -21,7 +21,7 @@ class UnOpsMatrix:
 		self.clear_insert(result)
 
 	def eigen_value(self, entry_list):
-		array = np.array([[eval(entry.get()) for entry in row]for row in entry_list])
+		array = np.array([[float(entry.get()) for entry in row]for row in entry_list])
 		results = linalg.eigvals(array)
 		string = ''
 		for result, i in zip(results, range(len(results))):
