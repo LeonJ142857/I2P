@@ -1,7 +1,7 @@
 from tkinter import *
 
 
-def configure_unops(objects_matrix_binary, matrix_binary_1, matrix_binary_2):
+def configure_binops(objects_matrix_binary, matrix_binary_1, matrix_binary_2):
 	# renaming for easier access
 	button_create_matrix_1 = objects_matrix_binary['button_create_matrix_1'	]
 	button_create_matrix_2 = objects_matrix_binary['button_create_matrix_2'	]
@@ -25,14 +25,13 @@ def configure_unops(objects_matrix_binary, matrix_binary_1, matrix_binary_2):
 	inner 					= objects_matrix_binary['inner'					]				
 	matrix_add 				= objects_matrix_binary['matrix_add'			]
 	matrix_multiplication 	= objects_matrix_binary['matrix_multiplication'	]
-	norm 					= objects_matrix_binary['norm'					]
-	outer 					= objects_matrix_binary['outer'					]				
+	outer 					= objects_matrix_binary['outer'					]
 	scalar_multiplication 	= objects_matrix_binary['scalar_multiplication'	]
 	solve 					= objects_matrix_binary['solve'					]
 	subtract 				= objects_matrix_binary['subtract'				]
 
 	buttons = [button_create_matrix_1, button_create_matrix_2, cross, 
-		dot, inner, matrix_add, matrix_multiplication, norm, outer,
+		dot, inner, matrix_add, matrix_multiplication, outer,
 		scalar_multiplication, solve, subtract, output_space,
 		size_entry_1, size_entry_2, text_matrix_1, text_matrix_2
 	]
@@ -42,8 +41,8 @@ def configure_unops(objects_matrix_binary, matrix_binary_1, matrix_binary_2):
 
 	matrix_binary_window.title("Classic Calculator > Matrix Binary Calculator")
 	matrix_binary_window.protocol("WM_DELETE_WINDOW", matrix_binary_window.withdraw)
-	binary_window_width = 240 + 60 * 3 + 60 * 3 ############
-	binary_window_height = 65 + max(100, 53 * 3) #########
+	binary_window_width = 270 + 60 * 3 + 60 * 3 ############
+	binary_window_height = 85 + max(100, 53 * 3) #########
 	binary_init_x = 50 + 390
 	binary_init_y = 50
 	matrix_binary_window.geometry(
@@ -52,30 +51,29 @@ def configure_unops(objects_matrix_binary, matrix_binary_1, matrix_binary_2):
 	matrix_binary_window.resizable(width=False, height=False)
 
 	# unary operations objects positioning
-	frame_buttons_binary.grid	(row=0, column=0, rowspan=4, columnspan=3)
-	frame_1_up.grid				(row=0, column=3, 			 columnspan=3)
-	frame_2_up.grid				(row=0, column=6, 			 columnspan=3)
-	frame_1_lower.grid			(row=1, column=3, rowspan=3, columnspan=3)
-	frame_2_lower.grid			(row=1, column=6, rowspan=3, columnspan=3)
-	
-	cross.grid					(row=1, column=0)
-	dot.grid					(row=1, column=1)
-	inner.grid					(row=1, column=2)
-	matrix_add.grid				(row=2, column=0)
-	matrix_multiplication.grid	(row=2, column=1)
-	norm.grid					(row=2, column=2)
-	outer.grid					(row=3, column=0)
-	scalar_multiplication.grid	(row=3, column=1)
-	solve.grid					(row=3, column=2)
-	subtract.grid				(row=4, column=1)
+	frame_buttons_binary.grid	(row=0, column=0, rowspan=4, columnspan=3		  , sticky="NSEW")
+	frame_1_up.grid				(row=0, column=3, 			 columnspan=3		  , sticky="NSEW")
+	frame_2_up.grid				(row=0, column=6, 			 columnspan=3		  , sticky="NSEW")
+	frame_1_lower.grid			(row=1, column=3, rowspan=3, columnspan=3		  , sticky="NSEW")
+	frame_2_lower.grid			(row=1, column=6, rowspan=3, columnspan=3		  , sticky="NSEW")
 
-	button_create_matrix_1.grid	(row=1, column=1)
-	button_create_matrix_1.grid	(row=1, column=1)
-	size_entry_1.grid			(row=0, column=1)
-	size_entry_2.grid			(row=0, column=1)
-	text_matrix_1.grid			(row=0, column=0)
-	text_matrix_2.grid			(row=0, column=0)
-	output_space.grid			(row=0, column=0, columnspan=3, ipady=2)
+	cross.grid					(row=1, column=0						 		  , sticky="NSEW")
+	dot.grid					(row=1, column=1						 		  , sticky="NSEW")
+	inner.grid					(row=1, column=2						 		  , sticky="NSEW")
+	matrix_add.grid				(row=2, column=0						 		  , sticky="NSEW")
+	matrix_multiplication.grid	(row=2, column=1						 		  , sticky="NSEW")
+	outer.grid					(row=2, column=2						 		  , sticky="NSEW")
+	scalar_multiplication.grid	(row=3, column=0						 		  , sticky="NSEW")
+	solve.grid					(row=3, column=1						 		  , sticky="NSEW")
+	subtract.grid				(row=3, column=2						 		  , sticky="NSEW")
+
+	button_create_matrix_1.grid	(row=1, column=1						 		  , sticky="NSEW")
+	button_create_matrix_2.grid	(row=1, column=1						 		  , sticky="NSEW")
+	size_entry_1.grid			(row=0, column=1						 		  , sticky="NSEW")
+	size_entry_2.grid			(row=0, column=1						 		  , sticky="NSEW")
+	text_matrix_1.grid			(row=0, column=0						 		  , sticky="NSEW")
+	text_matrix_2.grid			(row=0, column=0						 		  , sticky="NSEW")
+	output_space.grid			(row=0, column=0		   , columnspan=3, ipady=2, sticky="NSEW")
 
 	size_entry_1.insert(INSERT, "3 x 3")
 	size_entry_2.insert(INSERT, "3 x 3")
