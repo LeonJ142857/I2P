@@ -1,6 +1,6 @@
 import numpy as np
 from scipy import linalg
-from tkinter import INSERT, END, Text
+from tkinter import END
 
 
 class UnOpsMatrix:
@@ -53,6 +53,11 @@ class UnOpsMatrix:
 				string += str(num)+' '
 			string += '\n'
 		self.clear_insert(string)
+
+	def norm(self, entry_list):
+		array = np.array([[eval(entry.get()) for entry in row]for row in entry_list])
+		result = linalg.norm(array)
+		self.clear_insert(result)
 
 	def rank(self, entry_list):
 		array = np.array([[eval(entry.get()) for entry in row]for row in entry_list])
