@@ -1,5 +1,5 @@
 # Matrix_Calculator
-Matrix_Calculator is a software made with the purpose to help with everyday arithmetic calculations and also matrix calculations. This software is made with Python using Tkinter, Numpy and Scipy.
+Matrix_Calculator is a software made by Leon Jayakusuma with the purpose to help with everyday arithmetic calculations and also matrix calculations. This software is made with Python using Tkinter, Numpy and Scipy.
 # Known Bugs
 For matrix binary operations, changing dimensions might break the interface, so currently the binary operations only works when both matrices are 3 x 3.
 # Features
