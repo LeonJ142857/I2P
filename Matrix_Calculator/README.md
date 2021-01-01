@@ -40,7 +40,7 @@ Matrix operations that requires 2 matrices as input such as
 There is no need to install anything, just git clone this folder and you're set.
 Make sure you run it from an IDE and mark this root folder and the following folders as sources root :
 1. Classes
-  1.1. Object
-  1.2. Operations
+   * Object
+   * Operations
 2. Configurations and Functions
 3. Objects
