@@ -3,7 +3,7 @@ from tkinter import *
 from MatrixWindow import MatrixWindow
 from root_window import root_window
 from Matrix import Matrix
-from helper_functions import create_matrix
+from helper_functions import create_matrix_unary
 from UnOpsMatrix import UnOpsMatrix
 
 
@@ -25,7 +25,7 @@ button_create_matrix = \
 	HoverButton(
 		frame_up, text="create m x n matrix", padx=0,
 		pady=5, bg="white", fg="midnight blue",
-		command=lambda: create_matrix(
+		command=lambda: create_matrix_unary(
 			matrix_unary_window, frame_up,
 			frame_lower, matrix_unary, size_entry
 		), activebackground="gray87"

@@ -3,7 +3,7 @@ from tkinter import *
 from MatrixWindow import MatrixWindow
 from root_window import root_window
 from Matrix import Matrix
-from helper_functions import create_matrix
+from helper_functions import create_matrix_binary
 from BinOpsMatrix import BinOpsMatrix
 
 matrix_binary_window = MatrixWindow(root_window, bg='gray87')
@@ -30,9 +30,9 @@ button_create_matrix_1 = \
 	HoverButton(
 		frame_1_up, text="create m x n matrix", padx=0,
 		pady=5, bg="white", fg="midnight blue",
-		command=lambda: create_matrix(
-			matrix_binary_window, frame_1_up, frame_1_lower,
-			matrix_binary_1, size_entry_1
+		command=lambda: create_matrix_binary(
+			matrix_binary_window, frame_1_up, frame_2_up, frame_1_lower,
+			frame_2_lower, matrix_binary_1, matrix_binary_2, size_entry_1
 		), activebackground="gray87"
 	)
 
@@ -40,9 +40,9 @@ button_create_matrix_2 = \
 	HoverButton(
 		frame_2_up, text="create m x n matrix", padx=0,
 		pady=5, bg="white", fg="midnight blue",
-		command=lambda: create_matrix(
-			matrix_binary_window, frame_1_up, frame_1_lower,
-			matrix_binary_1, size_entry_1
+		command=lambda: create_matrix_binary(
+			matrix_binary_window, frame_2_up, frame_1_up, frame_2_lower,
+			frame_1_lower, matrix_binary_2, matrix_binary_1, size_entry_2
 		),
 		activebackground="gray87"
 	)
