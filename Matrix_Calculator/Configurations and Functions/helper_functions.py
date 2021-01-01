@@ -16,7 +16,6 @@ def create_matrix_unary(matrix_unary_window, frame_up, frame_lower, matrix, size
 		frame_lower.grid(row=1, column=3, rowspan=m, columnspan=n, sticky="NSEW")
 
 
-
 def create_matrix_binary(matrix_binary_window, frame_up_new,
 		frame_up_old, frame_lower_new, frame_lower_old,
 		matrix_binary_new, matrix_binary_old, size_entry_new
@@ -68,7 +67,6 @@ def create_matrix_binary(matrix_binary_window, frame_up_new,
 			rowspan=old_rowspan, columnspan=old_colspan, sticky="NSEW"
 		)
 		print(frame_lower_old.grid_info()['column'])
-
 
 
 def on_closing_root(root):
