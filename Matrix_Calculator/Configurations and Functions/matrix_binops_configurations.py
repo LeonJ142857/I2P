@@ -50,7 +50,7 @@ def configure_binops(objects_matrix_binary, matrix_binary_1, matrix_binary_2):
 	)
 	matrix_binary_window.resizable(width=False, height=False)
 
-	# unary operations objects positioning
+	# binary operations objects positioning
 	frame_buttons_binary.grid	(row=0, column=0, rowspan=4, columnspan=3		  , sticky="NSEW")
 	frame_1_up.grid				(row=0, column=3, 			 columnspan=3		  , sticky="NSEW")
 	frame_2_up.grid				(row=0, column=6, 			 columnspan=3		  , sticky="NSEW")

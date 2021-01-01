@@ -1,21 +1,32 @@
+# create new matrix for matrix unary window
 def create_matrix_unary(matrix_unary_window, frame_up, frame_lower, matrix, size_entry):
+	# row count of the matrix
 	m = size_entry.get()[0]
+	# column count of the matrix
 	n = size_entry.get()[4]
+	# bool value of whether or not m is a number
 	cond1 = isinstance(eval(m), (int, float))
+	# bool value of whether or not n is a number
 	cond2 = isinstance(eval(n), (int, float))
+	# bool value of whether or not the third element of size_entry is 'x'
 	cond3 = size_entry.get()[2] == 'x'
 	if cond1 and cond2 and cond3:
 		m = eval(m)
 		n = eval(n)
+		# call function create_matrix local to matrix, a Matrix object
 		matrix.create_matrix(m, n)
 		window_width = max(int(225 + 64 * n), int(225 + 64 * 3))
 		window_height = max(int(65 + max(120, 52.5 * m)), int(65 + 52.5 * 3))
+		# set new size of matrix_unary_window
 		matrix_unary_window.geometry(f'{window_width}x{window_height}')
+		# set matrix_unary_window unable to be resized
 		matrix_unary_window.resizable(width=False, height=False)
+		# set new position for upper frame
 		frame_up.grid(row=0, column=3, columnspan=n, sticky="NSEW")
+		# set new position for lower frame
 		frame_lower.grid(row=1, column=3, rowspan=m, columnspan=n, sticky="NSEW")
 
-
+# create new matrix for matrix binary window (still buggy)
 def create_matrix_binary(matrix_binary_window, frame_up_new,
 		frame_up_old, frame_lower_new, frame_lower_old,
 		matrix_binary_new, matrix_binary_old, size_entry_new
@@ -68,13 +79,14 @@ def create_matrix_binary(matrix_binary_window, frame_up_new,
 		)
 		print(frame_lower_old.grid_info()['column'])
 
-
+# function to be called when close button on top-right is clicked
 def on_closing_root(root):
 	from tkinter import messagebox
+	# create message box and if the user choose ok, then destroy the window
 	if messagebox.askokcancel("Quit", "Do you want to quit?"):
 		root.destroy()
 
-
+# set the weights of each cells of a widget to be of the same size
 def grid_configure_weights(object_name, row_count, col_count):
 	for i in range(row_count):
 		object_name.rowconfigure(i, weight=1)

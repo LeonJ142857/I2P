@@ -2,7 +2,7 @@ from root_window import io_space
 from UnOpsClassic import un_ops_classic
 
 
-class BinOpsClassic():
+class BinOpsClassic:
 	# class to handle all classical calculator's binary operations
 	def __init__(self, io_space):
 		# initialize the object with io_space entry widget,
@@ -34,10 +34,10 @@ class BinOpsClassic():
 	def io_space(self):
 		return self.__io_space
 
-	def set_fnum_operation(self, num, string):
+	def set_fnum_operation(self, f_num, operation):
 		# shortcut for setting the first number and the operation
-		self.f_num = num
-		self.operation = string
+		self.f_num = f_num
+		self.operation = operation
 
 	def add(self):
 		# set the first number and operation to value of io_space and 'addition' respectively,

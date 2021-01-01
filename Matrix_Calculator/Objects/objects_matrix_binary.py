@@ -53,6 +53,8 @@ output_space = Text(frame_buttons_binary, height=3, bd=3, width=27, wrap=NONE)
 bin_ops_matrix = BinOpsMatrix(output_space)
 
 # binary operations buttons
+
+# button to get cross product of first matrix with second matrix
 cross = \
 	HoverButton(
 		matrix_binary_window, text="CROSS(X)", padx=6, pady=15, bg="white",
@@ -60,6 +62,8 @@ cross = \
 			matrix_binary_1.entry_list, matrix_binary_2.entry_list
 		), fg="midnight blue", activebackground="gray87"
 	)
+
+# button to get dot product of first matrix with second matrix
 dot = \
 	HoverButton(
 		matrix_binary_window, text="DOT(.)", padx=0, pady=15, bg="white",
@@ -67,6 +71,8 @@ dot = \
 			matrix_binary_1.entry_list, matrix_binary_2.entry_list
 		), fg="midnight blue", activebackground="gray87"
 	)
+
+# button to get inner product of first matrix with second matrix
 inner = \
 	HoverButton(
 		matrix_binary_window, text="INNER", padx=0, pady=15, bg="white",
@@ -74,6 +80,8 @@ inner = \
 			matrix_binary_1.entry_list, matrix_binary_2.entry_list
 		), fg="midnight blue", activebackground="gray87"
 	)
+
+# button to get the matrix with elements the sum of each element in the same index(order doesn't matter)
 matrix_add = \
 	HoverButton(
 		matrix_binary_window, text="ADD", padx=0, pady=15, bg="white",
@@ -81,6 +89,8 @@ matrix_add = \
 			matrix_binary_1.entry_list, matrix_binary_2.entry_list
 		), fg="midnight blue", activebackground="gray87"
 	)
+
+# button to get matrix that result from first matrix multiplied with second matrix
 matrix_multiplication = \
 	HoverButton(
 		matrix_binary_window, text="MULT", padx=0, pady=15, bg="white",
@@ -88,6 +98,8 @@ matrix_multiplication = \
 			matrix_binary_1.entry_list, matrix_binary_2.entry_list
 		), fg="midnight blue", activebackground="gray87"
 	)
+
+# button to get outer product of first matrix with second matrix
 outer = \
 	HoverButton(
 		matrix_binary_window, text="OUTER", padx=0, pady=15, bg="white",
@@ -95,6 +107,8 @@ outer = \
 			matrix_binary_1.entry_list, matrix_binary_2.entry_list
 		), fg="midnight blue", activebackground="gray87"
 	)
+
+# button to get matrix that results from multiplying each element by a number
 scalar_multiplication = \
 	HoverButton(
 		matrix_binary_window, text="SCALE", padx=0, pady=15, bg="white",
@@ -102,6 +116,8 @@ scalar_multiplication = \
 			matrix_binary_1.entry_list, matrix_binary_2.entry_list
 		), fg="midnight blue", activebackground="gray87"
 	)
+
+# button to solve system of linear equation (order matters)
 solve = \
 	HoverButton(
 		matrix_binary_window, text="SOLVE", padx=15, pady=15, bg="white",
@@ -109,6 +125,9 @@ solve = \
 			matrix_binary_1.entry_list, matrix_binary_2.entry_list
 		), fg="midnight blue", activebackground="gray87"
 	)
+
+# button to get the matrix with elements the result of each element in the first matrix
+# subtracted with each element in the second matrix in the same index (order doesn't matter)
 subtract = \
 	HoverButton(
 		matrix_binary_window, text="SUBTRACT", padx=4, pady=15, bg="white",
@@ -117,6 +136,7 @@ subtract = \
 		), fg="midnight blue", activebackground="gray87"
 	)
 
+# dictionary full of widgets for matrix binary operations to make it easier to be passed to a function
 objects_matrix_binary = {
 	'matrix_binary_window': matrix_binary_window, 'text_matrix_1': text_matrix_1,
 	'cross': cross, 'dot': dot, 'inner': inner, 'matrix_add': matrix_add,

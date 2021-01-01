@@ -1,6 +1,6 @@
 from tkinter import Toplevel
-# Top level settings
 
+# wrapper class for Tkinter Toplevel widget to make it able to withdraw and appear
 
 class MatrixWindow(Toplevel):
 	# initialize the window
